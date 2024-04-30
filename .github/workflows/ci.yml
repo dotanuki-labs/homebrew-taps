@@ -10,17 +10,9 @@ jobs:
   checks:
     runs-on: ubuntu-22.04
 
-    container:
-      image: homebrew/brew:4.2.20
-      options: --user root
-    env:
-      HOMEBREW_NO_AUTO_UPDATE: 1
-      HOMEBREW_NO_INSTALL_FROM_API: 1
-
     steps:
       - name: Project Checkout
         uses: actions/checkout@v4.1.4
 
-      - name: Run checks
-        run: echo "✅ Passed!"
-
+      - name: Run E2E tests
+        run: ./e2e/run.sh
