@@ -13,7 +13,7 @@ brew install <some-tap>
 
 ## Available taps
 
-- TODO
+- [gwv](https://github.com/dotanuki-labs/gradle-wrapper-validator)
 
 ## License
 

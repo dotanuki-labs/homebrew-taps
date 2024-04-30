@@ -1,3 +1,6 @@
+# Copyright 2024 Dotanuki Labs
+# SPDX-License-Identifier: MIT
+
 class Gwv < Formula
   desc "A validator for gradle/wrapper jar binaries, intended to be used in CI pipelines"
   homepage "https://github.com/dotanuki-labs/gradle-wrapper-validator"
