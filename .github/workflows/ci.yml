@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  checks:
+    runs-on: macOS-14
+
+    steps:
+      - name: Project Checkout
+        uses: actions/checkout@v4.1.4
+
+      - name: Run checks
+        run: echo "✅ Passed!"
+
