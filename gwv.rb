@@ -1,9 +1,9 @@
 class Gwv < Formula
   desc "A validator for gradle/wrapper jar binaries, intended to be used in CI pipelines"
   homepage "https://github.com/dotanuki-labs/gradle-wrapper-validator"
-  version "0.2.0
+  version "0.2.0"
 
-  os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu "
+  os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
   arch = case Hardware::CPU.arch
          when :x86_64 then "x86_64"
          when :arm64 then "aarch64"
@@ -15,7 +15,7 @@ class Gwv < Formula
   @@url = "#{homepage}/releases/download/#{version}/#{@@filename}"
   @@using = :nounzip
 
-  @@sha256 = case "##{arch}-#{os}"
+  @@sha256 = case "#{arch}-#{os}"
     when "x86_64-unknown-linux-gnu" then "ad4d81bd7f30a2a05e65313ec273139f24b260fb343f94abbdc02fdc4cd7585e"
     when "x86_64-apple-darwin" then "d975f93599b17829d6b016d54163db657be7899215869756501df38c513d86a8"
     when "aarch64-unknown-linux-gnu" then "1c0248acc279b5dbc4cf8776016dfc4d39f243902bc1544d59f06d91e9d93dc8"
