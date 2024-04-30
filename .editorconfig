@@ -1,13 +1,18 @@
-# http://editorconfig.org
-
 root = true
 
 [*]
-charset = utf-8
 end_of_line = lf
+indent_size = 4
+indent_style = space
 insert_final_newline = true
+tab_width = 8
 trim_trailing_whitespace = true
 
-[*.{rb,md,toml,sh}]
-indent_style = space
-indent_size = 4
+[*.rb]
+indent_size = 2
+
+[*.yml]
+indent_size = 2
+
+[{*Makefile}]
+indent_style = tab
