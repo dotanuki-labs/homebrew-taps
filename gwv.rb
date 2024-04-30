@@ -11,7 +11,7 @@ class Gwv < Formula
          when :x86_64 then "x86_64"
          when :arm64 then "aarch64"
          else
-           raise "gorush: Unsupported system architecture #{Hardware::CPU.arch}"
+           raise "gwv: Unsupported system architecture #{Hardware::CPU.arch}"
          end
 
   @@filename = "gwv-#{arch}-#{os}"
@@ -33,7 +33,7 @@ class Gwv < Formula
 
 
   def install
-    filename = Gwv.class_variable_get("@@filename")
+    filename = @@filename
     bin.install filename => "gwv"
   end
 
