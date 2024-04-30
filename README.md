@@ -2,9 +2,7 @@
 
 > A collection of curated Homebrew Taps 🍻
 
-
 ## Installing taps
-
 
 ```bash
 brew tap dotanuki-labs/taps

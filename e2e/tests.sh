@@ -4,7 +4,6 @@
 
 set -euo pipefail
 
-
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_ANALYTICS=1
@@ -19,7 +18,6 @@ tap_formulas() {
     brew tap-info dotanuki-labs/tap
     echo
 }
-
 
 test_formula() {
     local name="$1"
@@ -36,7 +34,6 @@ test_formula() {
 
     echo
 }
-
 
 tap_formulas
 test_formula "gwv" "https://github.com/dotanuki-labs/gradle-wrapper-validator"

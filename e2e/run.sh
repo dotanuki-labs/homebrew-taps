@@ -7,7 +7,6 @@ set -euo pipefail
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${dir%/*}"
 
-
 echo
 echo "🔥 Building Docker image for tests!"
 echo
