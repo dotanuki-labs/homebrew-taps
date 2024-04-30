@@ -8,6 +8,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 tap_formulas() {
     brew tap dotanuki-labs/tap "/home/linuxbrew/dotanuki-taps"
@@ -25,7 +26,7 @@ test_formula() {
 
     echo
     echo "Installing $name ($url)"
-    brew install "$name"
+    brew install "$name" -q
 
     echo
     echo "Testing installation ($name) --help"
@@ -35,9 +36,8 @@ test_formula() {
     echo
 }
 
-tap_formulas
-test_formula "gwv" "https://github.com/dotanuki-labs/gradle-wrapper-validator"
+readonly dotanuki="https://github.com/dotanuki-labs"
 
-echo
-echo "🔥 Done!"
-echo
+tap_formulas
+test_formula "gwv" "$dotanuki/gradle-wrapper-validator"
+test_formula "gradle-wiper" "$dotanuki/gradle-wiper"
