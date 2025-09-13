@@ -4,9 +4,9 @@
 class Gwv < Formula
   desc "A validator for gradle/wrapper jar binaries, intended to be used in CI pipelines"
   homepage "https://github.com/dotanuki-labs/gradle-wrapper-validator"
-  version "0.4.0"
+  version "0.5.0"
 
-  os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
+  os = OS.mac? ? "apple-darwin" : "unknown-linux-musl"
   arch = case Hardware::CPU.arch
          when :x86_64 then "x86_64"
          when :arm64 then "aarch64"
@@ -19,10 +19,10 @@ class Gwv < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{arch}-#{os}"
-    when "x86_64-unknown-linux-gnu" then "6b97d329c76e9f288a51ab490739c63520b6b581c69f216db443e8f39011784c"
-    when "aarch64-unknown-linux-gnu" then "9e115c1b70680b58cc8db30172184f9019f5a42b5d800c5ed60e3e8b8597c44b"
-    when "x86_64-apple-darwin" then "c46422dcafc35b6d15b7d84362b203653243fe6ebf8b46daf99beee7058dc9ce"
-    when "aarch64-apple-darwin" then "0bc35c5920cf55b26a56285a2e46035838dc82cae1371fe469790aa5270b6d2e"
+    when "x86_64-unknown-linux-musl" then "c26be64591b642804f3ec1aac33b9e4d82866f088ec670c9d280559e52b79e39"
+    when "aarch64-unknown-linux-musl" then "aed727b582b22712e5624880557ec307e8969d4dad243e8bcdf21df7dda9a88a"
+    when "x86_64-apple-darwin" then "26195d6aa801adf70d9036af125acdac9e28ed7cee3dbca53aeb53c2811c891f"
+    when "aarch64-apple-darwin" then "6208190e4fdb42fd2189988b26bd69fecd4386c5e8a659116809faa10e09a0a8"
     else
       raise "gwv: Unsupported combination (arch / operating system) #{arch}-#{os}"
     end
