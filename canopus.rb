@@ -4,7 +4,7 @@
 class Canopus < Formula
   desc "A fast and pragmatic validator for Github Codeowners "
   homepage "https://github.com/dotanuki-labs/canopus"
-  version "0.1.0"
+  version "0.1.1"
 
   os = OS.mac? ? "apple-darwin" : "unknown-linux-musl"
   arch = case Hardware::CPU.arch
@@ -19,10 +19,10 @@ class Canopus < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{arch}-#{os}"
-    when "x86_64-unknown-linux-musl" then "390283f35d880d5d10f193f3915ace91eecd9cbda8dfbd01ef1e9e17819bc685"
-    when "aarch64-unknown-linux-musl" then "5b6d5595a3e7106477b6343c7c682cf2a8af51978492abee6901228ea5ed8485"
-    when "x86_64-apple-darwin" then "2956b1ae45a6de55f5054c4b2a9094d023d79a5a46268347ca4b9716cfceadc3"
-    when "aarch64-apple-darwin" then "f2835d81a3801d35fb5625297c2c759953e61beca2f47ae47a91f01e127af2bd"
+    when "x86_64-unknown-linux-musl" then "1ed408ca934899e87f23b5ec15be3bd5c0024a91adf93740e891e30443dd410b"
+    when "aarch64-unknown-linux-musl" then "3c78ecf346cb9548429282e10be7d0b2fedaf81604ec0ceff1c868308c7d6a7b"
+    when "x86_64-apple-darwin" then "b5575904a9b3c4e9e682da479e58fb189824bdb0917f7453a4953abb951e9033"
+    when "aarch64-apple-darwin" then "6468b55c45593c8c7ff9d3e73331d0acf658bf4de52d697d821fcb31aa1b7811"
     else
       raise "canopus: Unsupported combination (arch / operating system) #{arch}-#{os}"
     end
