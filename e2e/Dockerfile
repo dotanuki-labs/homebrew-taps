@@ -1,4 +1,4 @@
-# Copyright 2024 Dotanuki Labs
+# Copyright 2025 Dotanuki Labs
 # SPDX-License-Identifier: MIT
 
 FROM homebrew/ubuntu24.04:4.6.18
