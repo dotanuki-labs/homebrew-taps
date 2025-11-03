@@ -1,7 +1,7 @@
 # Copyright 2025 Dotanuki Labs
 # SPDX-License-Identifier: MIT
 
-FROM homebrew/ubuntu24.04:4.6.19
+FROM homebrew/ubuntu24.04:4.6.20
 
 COPY . "/home/linuxbrew/dotanuki-taps"
 COPY e2e/tests.sh /usr/bin/tests.sh
