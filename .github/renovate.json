@@ -7,7 +7,7 @@
     ],
     "osvVulnerabilityAlerts": true,
     "dependencyDashboard": true,
-    "labels": [
-        "dependencies"
-    ]
+    "minimumReleaseAge": "7 days",
+    "internalChecksFilter": "strict",
+    "labels": ["dependencies"]
 }
