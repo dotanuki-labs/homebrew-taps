@@ -20,7 +20,7 @@ jobs:
         uses: crate-ci/typos@9066e9940a8a05b98fb4733c62a726f83c9e57f8 # v1.43.3
 
       - name: Check MIT license on source files
-        uses: korandoru/hawkeye@9467ed11e794a33d4f2ebd3aad5937525ab80f23 # v6.4.2
+        uses: korandoru/hawkeye@7ffde2c5fd29f3c486e4a6510436dca54f386e2a # v6.5.0
 
   checks:
     runs-on: ubuntu-24.04
