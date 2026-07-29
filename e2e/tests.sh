@@ -40,6 +40,4 @@ readonly dotanuki="https://github.com/dotanuki-labs"
 
 git config --global --add safe.directory /home/linuxbrew/dotanuki-taps/.git
 tap_formulas
-test_formula "gwv" "$dotanuki/gradle-wrapper-validator"
-test_formula "gradle-wiper" "$dotanuki/gradle-wiper"
 test_formula "canopus" "$dotanuki/canopus"

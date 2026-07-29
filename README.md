@@ -13,9 +13,12 @@ brew install <some-tap>
 
 ## Available taps
 
-- [gwv](https://github.com/dotanuki-labs/gradle-wrapper-validator)
-- [gradle-wiper](https://github.com/dotanuki-labs/gradle-wiper)
 - [canopus](https://github.com/dotanuki-labs/canopus)
+
+## Decommissioned taps
+
+- [gradle-wiper](https://github.com/nekuroporisu/gradle-wiper)
+- [gwv](https://github.com/nekuroporisu/gradle-wrapper-validator)
 
 ## License
 
