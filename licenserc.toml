@@ -1,11 +1,13 @@
 # Copyright 2025 Dotanuki Labs
 # SPDX-License-Identifier: MIT
 
-inlineHeader = """
+[header]
+text = """
 Copyright {{props["inceptionYear"]}} {{props["copyrightOwner"]}}
 SPDX-License-Identifier: {{props["licenseSPDX"]}}
 """
 
+[files]
 includes = [
     "Dockerfile",
     "**/*.rb",
@@ -15,7 +17,7 @@ includes = [
     "**/*Dockerfile",
 ]
 
-[properties]
+[props]
 inceptionYear = 2025
 copyrightOwner = "Dotanuki Labs"
 licenseSPDX = "MIT"
